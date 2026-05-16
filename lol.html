@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dear Jaanu 🤍</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #0b0b0b;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+
+    section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      position: relative;
+    }
+
+    .stars {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.5;
+      animation: twinkle 3s infinite;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 1; }
+    }
+
+    .glow {
+      color: #ffd1dc;
+      text-shadow: 0 0 20px rgba(255, 182, 193, 0.7);
+    }
+
+    .small {
+      font-size: 14px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      opacity: 0.7;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 10vw, 6rem);
+      margin-bottom: 20px;
+    }
+
+    .typing {
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid white;
+      display: inline-block;
+      max-width: fit-content;
+      animation: blink .7s infinite;
+      font-size: 1.2rem;
+      margin-top: 20px;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+
+    .text {
+      font-size: clamp(1.5rem, 5vw, 3rem);
+      max-width: 900px;
+      line-height: 1.8;
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 1s ease;
+      color: white;
+      z-index: 5;
+      position: relative;
+    }
+
+    .text.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .paragraph {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(15px);
+      border-radius: 30px;
+      padding: 40px;
+      max-width: 900px;
+      line-height: 2;
+      font-size: 1.1rem;
+    }
+
+    .heart {
+      font-size: 5rem;
+      animation: pulse 2s infinite;
+      margin-bottom: 30px;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    .buttons {
+      margin-top: 40px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    button {
+      border: none;
+      padding: 16px 32px;
+      border-radius: 999px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+      font-family: inherit;
+    }
+
+    .primary {
+      background: #ffd1dc;
+      color: black;
+    }
+
+    .secondary {
+      background: rgba(255,255,255,0.08);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    textarea {
+      width: 100%;
+      max-width: 800px;
+      height: 250px;
+      border-radius: 30px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      color: white;
+      padding: 25px;
+      font-size: 1rem;
+      resize: none;
+      outline: none;
+      margin-top: 30px;
+    }
+
+    textarea::placeholder {
+      color: rgba(255,255,255,0.4);
+    }
+
+    .footer {
+      margin-top: 20px;
+      opacity: 0.3;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="stars" id="stars"></div>
+
+  <section>
+    <div class="small">for my one and only,</div>
+    <h1 class="glow">DEAR JAANU 🤍</h1>
+    <div class="typing">i made something for you.</div>
+  </section>
+
+  <section>
+    <div class="text">
+      you weren't just someone i loved.<br><br>
+      you became a habit<br>
+      i never wanted to lose.
+    </div>
+  </section>
+
+  <section>
+    <div class="text">
+      you became the first person<br>
+      i wanted to tell everything to.
+    </div>
+  </section>
+
+  <section>
+    <div class="text">
+      you brought a kind of happiness into my life<br>
+      that i didn't even know i needed.
+    </div>
+  </section>
+
+  <section>
+    <div class="text">
+      even when things became complicated,<br><br>
+      caring about you never stopped feeling natural.
+    </div>
+  </section>
+
+  <section>
+    <div class="paragraph text">
+      i know things haven't been perfect lately,
+      and maybe somewhere along the way we both got hurt more than we wanted to admit.
+      <br><br>
+      but even through all of that,
+      my feelings for you never stopped being real.
+      <br><br>
+      you were someone i cared about deeply,
+      someone who became part of my everyday life,
+      and no matter what happens between us,
+      i don't think i'll ever regret loving you.
+      <br><br>
+      a part of me will probably always hope
+      that maybe, someday, we'll find our way back to each other again.
+    </div>
+  </section>
+
+  <section>
+    <div class="heart">🤍</div>
+
+    <div class="text show">
+      i miss us, jaanu.<br><br>
+      come back already 🤍
+    </div>
+
+    <div class="buttons">
+      <button class="primary" onclick="yesResponse()">okay idiot 🤍</button>
+      <button class="secondary" onclick="maybeResponse()">let me think 😒</button>
+    </div>
+  </section>
+
+  <section>
+    <div class="text show">
+      and now...<br><br>
+      if there's anything you've wanted to say,<br>
+      i'll listen.
+    </div>
+
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="248c4fe8-e71a-4e24-b7a5-020f220eddc3">
+
+      <textarea
+        name="message"
+        placeholder="you can be honest here 🤍"
+      ></textarea>
+
+      <br>
+
+      <button type="submit" class="primary" style="margin-top:20px;">
+        send
+      </button>
+    </form>
+
+    <div class="footer">made with love 🤍</div>
+  </section>
+
+  <script>
+    const starsContainer = document.getElementById('stars');
+
+    for (let i = 0; i < 80; i++) {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      star.style.top = Math.random() * 100 + '%';
+      star.style.left = Math.random() * 100 + '%';
+      star.style.animationDuration = (2 + Math.random() * 3) + 's';
+      starsContainer.appendChild(star);
+    }
+
+    // text animations simplified for better browser compatibility
+
+    function yesResponse() {
+      const popup = document.createElement('div');
+      popup.innerHTML = `
+        <div style="
+          position: fixed;
+          inset: 0;
+          background: rgba(0,0,0,0.7);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 9999;
+        ">
+          <div style="
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 30px;
+            text-align: center;
+            color: white;
+            max-width: 400px;
+            font-family: Poppins, sans-serif;
+          ">
+            <h2 style="font-size:2rem;margin-bottom:15px;">YAYYYYYY 🤍</h2>
+            <p style="opacity:0.8;">now come here 🫂</p>
+            <button onclick="this.closest('div').parentElement.remove()" style="margin-top:20px;padding:12px 24px;border:none;border-radius:999px;background:#ffd1dc;color:black;cursor:pointer;">
+              okay 🤍
+            </button>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(popup);
+    }
+
+    function maybeResponse() {
+      const popup = document.createElement('div');
+      popup.innerHTML = `
+        <div style="
+          position: fixed;
+          inset: 0;
+          background: rgba(0,0,0,0.7);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 9999;
+        ">
+          <div style="
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 30px;
+            text-align: center;
+            color: white;
+            max-width: 400px;
+            font-family: Poppins, sans-serif;
+          ">
+            <h2 style="font-size:1.8rem;margin-bottom:15px;">hmmm okay okay 🤍</h2>
+            <p style="opacity:0.8;line-height:1.8;">i'll wait for you, dummy.<br>take your time 🤍</p>
+            <button onclick="this.closest('div').parentElement.remove()" style="margin-top:20px;padding:12px 24px;border:none;border-radius:999px;background:#ffd1dc;color:black;cursor:pointer;">
+              okayyy
+            </button>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(popup);
+    }
+  </script>
+
+</body>
+</html>
